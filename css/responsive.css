@@ -44,11 +44,11 @@
 @media (max-width: 900px) {
   .hero__inner {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 
   .hero__media {
     order: -1;
-    aspect-ratio: 16 / 10;
   }
 
   .category-grid {

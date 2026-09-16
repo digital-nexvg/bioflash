@@ -165,14 +165,20 @@
 }
 
 .hero__media {
-  aspect-ratio: 4 / 3;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
 }
 
 .media-frame--hero {
+  height: auto;
   border-radius: var(--radius-lg);
+}
+
+.media-frame--hero img {
+  position: static;
+  height: auto;
+  display: block;
 }
 
 /* ==========================================================================
