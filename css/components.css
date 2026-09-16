@@ -1,0 +1,537 @@
+/* ==========================================================================
+   Bento grid — Serviços
+   ========================================================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(160px, auto);
+  gap: var(--space-md);
+}
+
+.service-card {
+  grid-column: span 2;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.service-card--featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  justify-content: flex-end;
+  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.service-card--featured .service-card__title,
+.service-card--featured .service-card__desc {
+  color: var(--white);
+}
+
+.service-card--featured .service-card__icon {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--accent);
+}
+
+.service-card__icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: rgba(29, 142, 208, 0.1);
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.service-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.service-card__title {
+  font-size: var(--fs-lg);
+  margin: 0;
+  color: var(--primary);
+}
+
+.service-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.service-card__more {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--primary);
+}
+
+.service-card__more:hover {
+  color: var(--secondary);
+}
+
+.service-card--featured .service-card__more {
+  color: var(--accent);
+}
+
+.service-card--featured .service-card__more:hover {
+  color: var(--white);
+}
+
+/* ==========================================================================
+   Portfólio
+   ========================================================================== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.portfolio-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.portfolio-card__media {
+  /* Faixa fixa: fotos altas/retrato são cortadas, não esticam o card */
+  height: 220px;
+}
+
+.portfolio-card__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.portfolio-card__title {
+  font-size: var(--fs-lg);
+  margin: 0;
+}
+
+.portfolio-card__meta {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.portfolio-card__btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding-top: var(--space-sm);
+}
+
+.portfolio-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--primary);
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.portfolio-card__link:hover {
+  color: var(--secondary);
+}
+
+/* ==========================================================================
+   Carrossel de clientes
+   ========================================================================== */
+.clients-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding-block: var(--space-lg);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+#clientes .clients-carousel {
+  padding-block: var(--space-sm);
+}
+
+.clients-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  width: max-content;
+  animation: clients-scroll 32s linear infinite;
+}
+
+.clients-carousel:hover .clients-carousel__track,
+.clients-carousel__track.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.client-logo {
+  height: 56px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter var(--transition-base), opacity var(--transition-base);
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.client-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.client-logo img.is-broken {
+  display: none;
+}
+
+.client-logo__fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: var(--text-muted);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.6rem;
+}
+
+.client-logo img.is-broken + .client-logo__fallback {
+  display: flex;
+}
+
+.section--dark .client-logo__fallback {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+   Botão flutuante WhatsApp
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 900;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(155deg, #2fe373 0%, #1fb355 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(31, 179, 85, 0.4);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  animation: whatsapp-float-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s backwards;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 30px rgba(31, 179, 85, 0.5);
+}
+
+.whatsapp-float__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(47, 227, 115, 0.55);
+  animation: whatsapp-pulse 2.6s ease-out infinite;
+  pointer-events: none;
+}
+
+.whatsapp-float__icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  80% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes whatsapp-float-in {
+  from {
+    transform: translateY(24px) scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+  }
+
+  .whatsapp-float__ring {
+    animation: none;
+    display: none;
+  }
+}
+
+.whatsapp-float__tooltip {
+  position: absolute;
+  right: 68px;
+  white-space: nowrap;
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: var(--fs-xs);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(6px);
+  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+}
+
+.whatsapp-float:hover .whatsapp-float__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   Modal de galeria
+   ========================================================================== */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.gallery-modal[hidden] {
+  display: none;
+}
+
+.gallery-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 19, 63, 0.85);
+}
+
+.gallery-modal__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 720px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.gallery-modal__title {
+  margin-bottom: 0.2rem;
+  font-size: var(--fs-xl);
+}
+
+.gallery-modal__subtitle {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-md);
+}
+
+.gallery-modal__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--background);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text);
+}
+
+.gallery-modal__close:hover {
+  background: var(--border);
+}
+
+.gallery-modal__stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.media-frame--modal {
+  aspect-ratio: 4 / 3;
+  flex: 1;
+}
+
+.gallery-modal__nav {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--primary);
+  font-size: var(--fs-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal__nav:hover {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+.gallery-modal__counter {
+  text-align: center;
+  margin-top: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Modal de serviço (Ver mais)
+   ========================================================================== */
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.service-modal[hidden] {
+  display: none;
+}
+
+.service-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 19, 63, 0.85);
+}
+
+.service-modal__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.service-modal__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--background);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text);
+  z-index: 2;
+}
+
+.service-modal__close:hover {
+  background: var(--border);
+}
+
+.service-modal .media-frame--modal {
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--space-md);
+}
+
+.service-modal__title {
+  margin-bottom: var(--space-xs);
+}
+
+.service-modal__desc {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.modal-cta {
+  margin-top: var(--space-md);
+}
+
+.modal-cta .btn {
+  width: 100%;
+}
+
