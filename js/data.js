@@ -141,6 +141,33 @@ window.BIOFLASH_DATA = {
     }
   ],
 
+  documents: [
+    {
+      title: 'Certificado de controle de agrotóxicos - limpeza de reservatório de água',
+      file: 'Certificado Controle Agrotóxicos (Limpeza reservatório água.pdf'
+    },
+    {
+      title: 'Certificado de controle de agrotóxicos - controle de vetores e pragas urbanas',
+      file: 'Certificado Controle Agrotóxicos (Controle Vetores e Pragas Urbanas).pdf'
+    },
+    {
+      title: 'Atestado de capacidade técnica',
+      file: 'ATESTADO DE CAPACIDADE TÉCNICA BIO FLASH LTDA.PDF'
+    },
+    {
+      title: 'ART - CRBio-02 - Bióloga Yasmin Vieira',
+      file: 'ART_CRBio-02_Biologa_Yasmin_Vieira_assinado_assinado.pdf'
+    },
+    {
+      title: 'Certificado de regularidade - IBAMA',
+      file: 'IBAMA_CR_BIO_FLASH.pdf'
+    },
+    {
+      title: 'Termo de responsabilidade - pessoa jurídica',
+      file: 'TERMO DE RESPONSABILIDADE - PJ.pdf'
+    }
+  ],
+
   clients: [
     { name: 'Rede Economia', file: 'rede-economia.png' },
     { name: 'Teatro Municipal do Rio de Janeiro', file: 'teatro-municipal-rio.png' },

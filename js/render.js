@@ -75,6 +75,29 @@
     track.innerHTML = single + single;
   }
 
+  function renderDocuments() {
+    var grid = document.getElementById('documents-grid');
+    if (!grid || !DATA) return;
+
+    var documents = DATA.documents || [];
+    if (!documents.length) {
+      grid.innerHTML = '<p class="documents-empty">Documentos em preparação.</p>';
+      return;
+    }
+
+    grid.innerHTML = documents.map(function (document) {
+      return (
+        '<a class="quality-card quality-card--document" href="public/documentos/' + document.file + '" target="_blank" rel="noopener" aria-label="Abrir ' + document.title + '">' +
+          '<span class="quality-card__icon" aria-hidden="true">' +
+            '<svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 13h6M9 17h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</span>' +
+          '<span class="quality-card__title">' + document.title + '</span>' +
+          '<span class="quality-card__note">Abrir PDF</span>' +
+        '</a>'
+      );
+    }).join('');
+  }
+
   function applyContactConfig() {
     if (!CONFIG) return;
 
@@ -110,6 +133,7 @@
     renderServices();
     renderPortfolio();
     renderClients();
+    renderDocuments();
     applyContactConfig();
   }
 
