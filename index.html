@@ -349,13 +349,19 @@
     <div class="service-modal__content">
       <button type="button" class="service-modal__close" data-service-close aria-label="Fechar detalhes do serviço">&times;</button>
 
-      <div class="media-frame media-frame--modal" id="service-modal-image-wrapper">
-        <img src="" alt="" class="js-media" id="service-modal-image">
-        <div class="media-placeholder" aria-hidden="true">
-          <svg viewBox="0 0 24 24" class="media-placeholder__icon"><path d="M4 5h16v12H4zM2 19h20M9 8h6M9 11h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span>Imagem em preparação</span>
+      <div class="gallery-modal__stage">
+        <button type="button" class="gallery-modal__nav gallery-modal__nav--prev" id="service-modal-prev" aria-label="Foto anterior">&#10094;</button>
+        <div class="media-frame media-frame--modal" id="service-modal-image-wrapper">
+          <img src="" alt="" class="js-media" id="service-modal-image" onerror="this.classList.add('is-broken')">
+          <div class="media-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="media-placeholder__icon"><path d="M4 5h16v12H4zM2 19h20M9 8h6M9 11h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Imagem em preparação</span>
+          </div>
         </div>
+        <button type="button" class="gallery-modal__nav gallery-modal__nav--next" id="service-modal-next" aria-label="Próxima foto">&#10095;</button>
       </div>
+
+      <div class="gallery-modal__counter" id="service-modal-counter"></div>
 
       <h2 id="service-modal-title" class="service-modal__title"></h2>
       <p class="service-modal__desc" id="service-modal-desc"></p>

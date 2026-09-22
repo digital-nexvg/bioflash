@@ -10,7 +10,9 @@ window.BIOFLASH_DATA = {
       id: 'controle-pragas',
       title: 'Controle de Pragas',
       description: 'Gestão especializada para prevenção e eliminação de pragas urbanas em ambientes corporativos e residenciais.',
-      image: 'public/images/servicos-destaque/controle-pragas.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/pest-control',
+      images: ['https://loremflickr.com/800/600/pest-control'],
       featured: true,
       icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 10h.01M15 10h.01M8.5 15c1 1 2.2 1.5 3.5 1.5s2.5-.5 3.5-1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
     },
@@ -18,70 +20,115 @@ window.BIOFLASH_DATA = {
       id: 'dedetizacao',
       title: 'Dedetização',
       description: 'Aplicação técnica de produtos e métodos adequados para o controle de insetos e outros vetores.',
-      image: 'public/images/servicos-destaque/dedetizacao.jpg',
+      image: 'public/images/servicos/dedetizacao/01-localiza.jpg',
+      images: [
+        'public/images/servicos/dedetizacao/01-localiza.jpg',
+        'public/images/servicos/dedetizacao/02-localiza.jpg',
+        'public/images/servicos/dedetizacao/03-localiza.jpg',
+        'public/images/servicos/dedetizacao/04-localiza.jpg',
+        'public/images/servicos/dedetizacao/05-localiza.jpg'
+      ],
       icon: '<svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M4 12H1M23 12h-3M6 6l2 2M18 18l-2-2M6 18l2-2M18 6l-2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
     },
     {
       id: 'descupinizacao',
       title: 'Descupinização',
       description: 'Tratamento especializado contra cupins, protegendo estruturas de madeira e a integridade das edificações.',
-      image: 'public/images/servicos-destaque/descupinizacao.jpg',
+      image: 'public/images/servicos/descupinizacao/01-teatro.jpg',
+      images: [
+        'public/images/servicos/descupinizacao/01-teatro.jpg',
+        'public/images/servicos/descupinizacao/02-teatro.jpg',
+        'public/images/servicos/descupinizacao/03-teatro.jpg',
+        'public/images/servicos/descupinizacao/04-teatro.jpg',
+        'public/images/servicos/descupinizacao/05-teatro.jpg'
+      ],
       icon: '<svg viewBox="0 0 24 24"><path d="M4 20c4-8 12-8 16 0M8 20c1-4 3-6 4-6s3 2 4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
     },
     {
       id: 'limpeza-reservatorios',
       title: 'Limpeza de Reservatórios',
       description: 'Higienização de caixas d\'água e reservatórios, contribuindo para a qualidade e segurança da água armazenada.',
-      image: 'public/images/servicos-destaque/limpeza-reservatorios.jpg',
+      image: 'public/images/servicos/limpeza-reservatorios/01.jpg',
+      images: [
+        'public/images/servicos/limpeza-reservatorios/01.jpg',
+        'public/images/servicos/limpeza-reservatorios/02.jpg',
+        'public/images/servicos/limpeza-reservatorios/03.jpg',
+        'public/images/servicos/limpeza-reservatorios/04.jpg',
+        'public/images/servicos/limpeza-reservatorios/05.jpg'
+      ],
       icon: '<svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.8 5 9.5a5 5 0 1 1-10 0C7 9.8 9 7 12 3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
     },
     {
       id: 'impermeabilizacao-reservatorios',
       title: 'Impermeabilização de Reservatórios',
       description: 'Aplicação de sistemas impermeabilizantes que previnem infiltrações e vazamentos em reservatórios.',
-      image: 'public/images/servicos-destaque/impermeabilizacao-reservatorios.jpg',
+      image: 'public/images/servicos/impermeabilizacao-reservatorios/01.jpg',
+      images: [
+        'public/images/servicos/impermeabilizacao-reservatorios/01.jpg',
+        'public/images/servicos/impermeabilizacao-reservatorios/02.jpg',
+        'public/images/servicos/impermeabilizacao-reservatorios/03.jpg',
+        'public/images/servicos/impermeabilizacao-reservatorios/04.jpg',
+        'public/images/servicos/impermeabilizacao-reservatorios/05.jpg'
+      ],
       icon: '<svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.5"/></svg>'
     },
     {
       id: 'impermeabilizacao-calhas-lajes',
       title: 'Impermeabilização de Calhas e Lajes',
       description: 'Soluções de impermeabilização para calhas e lajes, evitando infiltrações e prolongando a vida útil da estrutura.',
-      image: 'public/images/servicos-destaque/impermeabilizacao-calhas-lajes.jpg',
+      image: 'public/images/servicos/impermeabilizacao-calhas-lajes/01.jpg',
+      images: [
+        'public/images/servicos/impermeabilizacao-calhas-lajes/01.jpg',
+        'public/images/servicos/impermeabilizacao-calhas-lajes/02.jpg',
+        'public/images/servicos/impermeabilizacao-calhas-lajes/03.jpg',
+        'public/images/servicos/impermeabilizacao-calhas-lajes/04.jpg',
+        'public/images/servicos/impermeabilizacao-calhas-lajes/05.jpg'
+      ],
       icon: '<svg viewBox="0 0 24 24"><path d="M3 9h18M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'
     },
     {
       id: 'manutencao-predial',
       title: 'Manutenção Predial',
       description: 'Serviços contínuos de manutenção que garantem o bom funcionamento e a conservação das edificações.',
-      image: 'public/images/servicos-destaque/manutencao-predial.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/building-maintenance',
+      images: ['https://loremflickr.com/800/600/building-maintenance'],
       icon: '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a3.5 3.5 0 0 1-4.6 4.6L4 17l3 3 6.1-6.1a3.5 3.5 0 0 1 4.6-4.6L21 6l-3-3-3.3 3.3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
     },
     {
       id: 'obras-civis',
       title: 'Obras Civis',
       description: 'Execução de obras civis com foco em qualidade, segurança e cumprimento de prazos.',
-      image: 'public/images/servicos-destaque/obras-civis.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/construction',
+      images: ['https://loremflickr.com/800/600/construction'],
       icon: '<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
     },
     {
       id: 'hidraulica',
       title: 'Hidráulica',
       description: 'Instalação, manutenção e reparo de sistemas hidráulicos residenciais, comerciais e corporativos.',
-      image: 'public/images/servicos-destaque/hidraulica.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/plumbing',
+      images: ['https://loremflickr.com/800/600/plumbing'],
       icon: '<svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 0 1-10 0Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 12v8M9 20h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
     },
     {
       id: 'eletrica',
       title: 'Elétrica',
       description: 'Serviços elétricos com segurança e conformidade, do reparo pontual à manutenção preventiva.',
-      image: 'public/images/servicos-destaque/eletrica.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/electrician',
+      images: ['https://loremflickr.com/800/600/electrician'],
       icon: '<svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
     },
     {
       id: 'climatizacao',
       title: 'Ar-condicionado e Climatização',
       description: 'Instalação e manutenção de sistemas de ar-condicionado e climatização para ambientes corporativos e residenciais.',
-      image: 'public/images/servicos-destaque/climatizacao.jpg',
+      // Foto temporária via link — substituir por foto própria em public/images/servicos-destaque/
+      image: 'https://loremflickr.com/800/600/air-conditioning',
+      images: ['https://loremflickr.com/800/600/air-conditioning'],
       icon: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 15v3M10 15v4M14 15v3M18 15v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
     }
   ],

@@ -515,7 +515,18 @@
 
 .service-modal .media-frame--modal {
   aspect-ratio: 4 / 3;
+}
+
+.service-modal .gallery-modal__stage {
   margin-bottom: var(--space-md);
+}
+
+.service-modal .gallery-modal__counter {
+  margin-bottom: var(--space-md);
+}
+
+.service-modal .gallery-modal__nav[hidden] {
+  display: none;
 }
 
 .service-modal__title {
